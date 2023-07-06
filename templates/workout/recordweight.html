@@ -1,0 +1,26 @@
+{% extends './base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}体重記録画面{% endblock %}
+
+{% block content %}
+<div class="back-btn"><a href="{% url 'workout:user' %}">&#8592;戻る</a></div>
+<div class="weight-container">
+  <div class="now-weight">
+    <h2>現在の体重：{{ user.weight | floatformat:1}}</h2>
+    <p>今日の体重を入力してください</p>
+  </div>
+  <form method="post" novalidate>
+  {% csrf_token %}
+    <p>{{ form.weight | add_class:"weight-record"}}<span class="span">kg</span></p>
+    <div>
+      <button type="submit" class="btn btn-success">記録</button>
+    </div>
+  </form>
+
+  <div class="all-weight-btn">
+    <p>今までの記録を見る</p>
+  </div>
+</div>
+{% endblock %}

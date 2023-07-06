@@ -1,0 +1,31 @@
+{% extends './base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}トレーニング部位選択画面{% endblock %}
+
+{% block content %}
+  <main>
+    <div class="back-btn"><a href="{% url 'workout:user' %}">&#8592;戻る</a></div>
+    <div>
+    <div>
+      <p class="choice-part">どちらの記録を見るか選択してください！</p>
+    </div>
+    <div class="container">
+        <div class="training-container">
+          <div class="choice-record">
+              <a href="{% url 'workout:user' %}">
+                  <img src="{% static 'images/weight-record.png' %}" alt="トレーニング画像">
+              </a>
+              <p>トレーニング記録</p>
+          </div>
+          <div class="choice-record">
+              <a href="{% url 'workout:user' %}">
+                  <img src="{% static 'images/diet.png' %}" alt="トレーニング画像">
+              </a>
+              <p>体重記録</p>
+          </div>
+        </div>
+    </div>
+  </main>
+{% endblock %}

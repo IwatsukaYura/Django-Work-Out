@@ -1,0 +1,43 @@
+{% extends './base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}ホーム画面{% endblock %}
+
+{% block content %}
+    <main>
+        <div class="container">
+            <div class="home-container">
+                    <div class="function">
+                        <a href="{% url 'workout:choicetraining' %}">
+                            <img src="{% static 'images/training.png' %}" alt="トレーニング画像">
+                        </a>
+                        <p>トレーニングをする</p>
+                    </div>
+                </a>
+                
+                    <div class="function">
+                        <a href="{% url 'workout:choicerecord' %}">
+                            <img src="{% static 'images/planning.png' %}" alt="トレーニング画像">
+                        </a>
+                        <p>記録を見る</p>
+                    </div>
+                
+                
+                    <div class="function">
+                        <a href="{% url 'workout:user' %}">
+                            <img src="{% static 'images/question.png' %}" alt="トレーニング画像">
+                        </a>
+                        <p>Q&A</p>
+                    </div>
+                
+                    <div class="function">
+                        <a href="{% url 'workout:changeweight' %}">
+                            <img src="{% static 'images/lose-weight.png' %}" alt="トレーニング画像">
+                        </a>
+                        <p>体重を管理する</p>
+                    </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

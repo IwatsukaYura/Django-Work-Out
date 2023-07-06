@@ -1,0 +1,32 @@
+{% extends './base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}ログイン{% endblock %}
+
+{% block content %}
+    <div class="intoduce-signin"><a href="{% url 'workout:signup' %}">はじめての方&#8594;</a></div>
+    <main>
+        <div class="login">
+            <img class="login-img" src="{% static 'images/welcome.svg' %}" alt="ログイン画面の画像">
+            <form class="login-form"  action="{% url 'workout:login' %}" method="post">
+                {% csrf_token %}
+                <div class="login-info">
+                    <p><label for="id_username">ユーザーネーム</label></p>
+                    <p>{{ form.username | add_class:"each-login-info"}}</p>
+                </div>
+                <div class="login-info">
+                    <p><label for="id_password">パスワード</label></p>
+                    <p>{{ form.password | add_class:"each-login-info"}}</p>
+                </div>
+                <p><input type="hidden" name="next" value="{{next}}"></p>
+                <div class="login-btn">
+                    <p><input type="submit" value="ログイン"></p>
+                </div>
+                {% if form.non_field_errors %}
+                <p class="login-err">ログインに失敗しました<br>再入力してください</p>
+                {% endif %}
+            </form>
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends './base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}トレーニング部位選択画面{% endblock %}
+
+{% block content %}
+  <main>
+    <div class="back-btn"><a href="{% url 'workout:user' %}">&#8592;戻る</a></div>
+      <p class="choice-part">トレーニング部位を選択してください</p>
+    </div>
+    <div class="container">
+        <div class="training-container">
+          <div class="training-parts">
+              <a href="{% url 'workout:user' %}">
+                  <img src="{% static 'images/push-up.png' %}" alt="トレーニング画像">
+              </a>
+              <p>胸</p>
+          </div>
+          <div class="training-parts">
+              <a href="{% url 'workout:user' %}">
+                  <img src="{% static 'images/chinning.png' %}" alt="トレーニング画像">
+              </a>
+              <p>背中</p>
+          </div>
+          <div class="training-parts">
+              <a href="{% url 'workout:user' %}">
+                  <img src="{% static 'images/sholder.png' %}" alt="トレーニング画像">
+              </a>
+              <p>肩</p>
+          </div>
+          <div class="training-parts">
+              <a href="{% url 'workout:changeweight' %}">
+                  <img src="{% static 'images/arm.png' %}" alt="トレーニング画像">
+              </a>
+              <p>腕</p>
+          </div>
+          <div class="training-parts">
+            <a href="{% url 'workout:changeweight' %}">
+                <img src="{% static 'images/leg.png' %}" alt="トレーニング画像">
+            </a>
+            <p>脚</p>
+          </div>
+          <div class="training-parts">
+            <a href="{% url 'workout:changeweight' %}">
+                <img src="{% static 'images/sit-up.png' %}" alt="トレーニング画像">
+            </a>
+            <p>腹筋</p>
+          </div>
+        </div>
+    </div>
+  </main>
+{% endblock %}

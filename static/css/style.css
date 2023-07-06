@@ -1,0 +1,232 @@
+/* 全画面共通のスタイル指定 */
+body{
+  background-color: #E84545;
+}
+
+/* ログイン・サインイン画面のスタイル指定 */
+.intoduce-signin{
+  text-align: right;
+}
+
+.intoduce-signin, .intoduce-login a{
+  color: blue;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.login{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.login-form p{
+  color: white;
+  font-size: 20px;
+}
+
+.login-info{
+  margin-bottom: 60px;
+}
+
+.login-img{
+  height: 500px;
+}
+
+.each-login-info{
+  height: 50px;
+  background-color: white;
+  border: 2px black solid;
+  border-radius: 10px;
+  color: black;
+}
+
+.login-btn{
+  background-color: #53354A;
+  width: 45%;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.login-btn p{
+  font-size: 28px;
+  text-align: center;
+}
+
+.login-err{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.each-signup-info{
+  height: 50px;
+  background-color: white;
+  border: 2px black solid;
+  border-radius: 10px;
+  color: black;
+}
+.signup-info{
+  margin-top: 20px;
+  margin-bottom: 45px;
+}
+
+.signup-btn{
+  background-color: #53354A;
+  width: 55%;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.signup-btn p{
+  font-size: 28px;
+  text-align: center;
+}
+.intoduce-login{
+  text-align: left;
+}
+
+
+.home-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.function{
+  background-color: #EEE2DE;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.home-container p{
+  text-align: center;
+  font-size: 35px;
+  margin-top: 10px;
+}
+
+.home-container img{
+  height: 90%;
+  margin: auto;
+  display: block;
+}
+
+/* 体重変更画面のスタイル指定 */
+
+.weight-container{
+  text-align: center;
+  color: white;
+}
+
+.back-btn{
+  text-align: left;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.now-weight{
+  margin-top: 50px;
+}
+
+.now-weight h2{
+  font-size: 80px;
+  margin-bottom: 50px;
+}
+
+.now-weight p{
+  font-size: 30px;
+  margin-bottom: 9px;
+}
+
+.weight-record{
+  background-color: white;
+  height: 55px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  color: black;
+  font-size: 30px;
+}
+
+.btn-success{
+  background-color: #53354A;
+  width: 15%;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+.span{
+  font-size: 30px;
+}
+
+.btn-success{
+  background-color: #53354A;
+  width: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.all-weight-btn{
+  background-color: #53354A;
+  width: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+/* トレーニング選択画面のスタイル指定 */
+.training-parts{
+  background-color: #EEE2DE;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  cursor: pointer;
+  height: 50%;
+}
+
+.training-parts img{
+  height: 400px;
+  margin: auto;
+  display: block;
+}
+
+.training-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.training-container p{
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.choice-part{
+  color: white;
+  font-size: 35px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+/* 記録選択画面のスタイル指定 */
+.choice-record{
+  background-color: #EEE2DE;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.choice-record img{
+  height: 450px;
+  margin: auto;
+  display: block;
+}

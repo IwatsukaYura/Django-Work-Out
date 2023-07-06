@@ -1,0 +1,24 @@
+{% load widget_tweaks %}
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner">
+          <img class="logo-img" src="{% static 'images/WOP-Logo.png' %}" alt="ロゴの画像">
+          <h3>WorkOutProvider</h3>
+      </div>
+    </header>
+    {% block content %}{% endblock %}
+  </body>
+</html>

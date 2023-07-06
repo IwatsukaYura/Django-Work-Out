@@ -1,0 +1,44 @@
+{% extends './base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}ログイン{% endblock %}
+
+{% block content %}
+    <div class="intoduce-login"><a href="{% url 'workout:login' %}">&#8592;ログインはこちら</a></div>
+    <main>
+        <div class="login">
+            <img class="login-img" src="{% static 'images/signup.svg' %}" alt="サインイン画面の画像">
+            <form class="login-form"  action="{% url 'workout:signup' %}" method="post">
+                {% csrf_token %}
+                <div class="signup-info">
+                    <p><label for="id_username">ユーザーネーム</label></p>
+                    <p>{{ form.username | add_class:"each-signup-info"}}</p>
+                </div>
+                <div class="signup-info">
+                    <p><label for="id_height">身長</label></p>
+                    <p>{{ form.height | add_class:"each-signup-info"}}</p>
+                </div>
+                <div class="signup-info">
+                    <p><label for="id_weight">体重</label></p>
+                    <p>{{ form.weight | add_class:"each-signup-info"}}</p>
+                </div>
+                <div class="signup-info">
+                    <p><label for="id_password1">パスワード(英数字8文字以上)</label></p>
+                    <p>{{ form.password1 | add_class:"each-signup-info"}}</p>
+                    <p>{{ error }}</p>
+                </div>
+                <div class="signup-info">
+                    <p><label for="id_password2">パスワード(確認用)</label></p>
+                    <p>{{ form.password2 | add_class:"each-signup-info"}}</p>
+                </div>
+                {% if form.non_field_errors %}
+                <p class="login-err">ログインに失敗しました<br>再入力してください</p>
+                {% endif %}
+                <div class="signup-btn">
+                    <p><input type="submit" value="ユーザ作成"></p>
+                </div>
+            </form>
+        </div>
+    </main>
+{% endblock %}
