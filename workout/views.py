@@ -1,4 +1,3 @@
-from django.contrib import admin
 from django.shortcuts import render
 from django.contrib.auth import login
 from .forms import SignupForm, LoginForm
@@ -6,8 +5,9 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.views.generic import TemplateView, CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import get_user_model
-from django.urls import reverse_lazy
-
+from .models import Training, BodyPart
+from django.views import generic
+from django.http import HttpResponse
 CustomUser = get_user_model()
 
 #ユーザーアカウントの登録用View
@@ -52,6 +52,7 @@ class MyUserView(LoginRequiredMixin, TemplateView):
 #         context['users'] = CustomUser.objects.exclude(username=self.request.user.username)
 #         return context
 
+#ユーザーが体重を記録するためのView
 class UserWightChangeView(LoginRequiredMixin, UpdateView):
     model = CustomUser
     fields = ('weight',)
@@ -66,10 +67,24 @@ class UserWightChangeView(LoginRequiredMixin, UpdateView):
     def get_object(self):
         return self.request.user
     
+#ユーザがトレーニング部位を選択するためのView
 class ChoiceTrainingView(LoginRequiredMixin, TemplateView):
     template_name = 'workout/choicetraining.html'
     pass
 
+#ユーザが記録画面を選択するためのView
 class ChoiceRecordView(LoginRequiredMixin, TemplateView):
     template_name = 'workout/choicerecord.html'
     pass
+
+class TrainingView(LoginRequiredMixin, TemplateView):
+    template_name = 'workout/training.html'
+    # クエリパラメータを代入
+    def get(self, request, bodyparts):
+        training = BodyPart.objects.get(part_num=bodyparts)
+        test = training.training.filter(part_num=bodyparts)
+        context = {
+            "trainings": test
+        }
+        
+        return render(request, self.template_name, context)

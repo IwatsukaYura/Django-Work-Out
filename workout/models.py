@@ -9,3 +9,21 @@ class CustomUser(AbstractUser):
 
     def get_bmi(self):
         return self.weight / ((self.height / 100) * (self.height / 100))
+    
+    
+
+
+class BodyPart(models.Model):
+    part_num = models.IntegerField()
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
+
+class Training(models.Model):
+    part_num = models.ForeignKey(BodyPart, on_delete=models.CASCADE, related_name='training')
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name

@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}体重記録画面{% endblock %}
+
+{% block content %}
+  {% for training in trainings %}
+  <img src="{% static 'images/welcome.svg' %}"  alt="">
+  <div>
+    <p>こんにちは</p>
+  </div>
+  <h1>{{ training.name }}</h1>
+  <p>{{ training.description }}</p>
+  {% endfor %}
+{% endblock content %}

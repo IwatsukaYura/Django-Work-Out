@@ -11,5 +11,5 @@ urlpatterns = [
     path('changeweight/', views.UserWightChangeView.as_view(), name='changeweight'),
     path('choicetraining/', views.ChoiceTrainingView.as_view(), name='choicetraining'),
     path('choicerecord/', views.ChoiceRecordView.as_view(), name='choicerecord'),
-    
+    path('training/<int:bodyparts>', views.TrainingView.as_view(), name='training'),
 ]

@@ -12,37 +12,37 @@
     <div class="container">
         <div class="training-container">
           <div class="training-parts">
-              <a href="{% url 'workout:user' %}">
+              <a href="{% url 'workout:training' bodyparts=1 %}">
                   <img src="{% static 'images/push-up.png' %}" alt="トレーニング画像">
               </a>
               <p>胸</p>
           </div>
           <div class="training-parts">
-              <a href="{% url 'workout:user' %}">
+              <a href="{% url 'workout:training' bodyparts=2 %}">
                   <img src="{% static 'images/chinning.png' %}" alt="トレーニング画像">
               </a>
               <p>背中</p>
           </div>
           <div class="training-parts">
-              <a href="{% url 'workout:user' %}">
+              <a href="{% url 'workout:training' bodyparts=3 %}">
                   <img src="{% static 'images/sholder.png' %}" alt="トレーニング画像">
               </a>
               <p>肩</p>
           </div>
           <div class="training-parts">
-              <a href="{% url 'workout:changeweight' %}">
+              <a href="{% url 'workout:training' bodyparts=4 %}">
                   <img src="{% static 'images/arm.png' %}" alt="トレーニング画像">
               </a>
               <p>腕</p>
           </div>
           <div class="training-parts">
-            <a href="{% url 'workout:changeweight' %}">
+            <a href="{% url 'workout:training' bodyparts=5 %}">
                 <img src="{% static 'images/leg.png' %}" alt="トレーニング画像">
             </a>
             <p>脚</p>
           </div>
           <div class="training-parts">
-            <a href="{% url 'workout:changeweight' %}">
+            <a href="{% url 'workout:training' bodyparts=6 %}">
                 <img src="{% static 'images/sit-up.png' %}" alt="トレーニング画像">
             </a>
             <p>腹筋</p>

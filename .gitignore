@@ -1,1 +1,13 @@
 venv
+# Created by https://www.gitignore.io/api/linux,django
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media
+
+# If your build process includes running collectstatic, then ...
