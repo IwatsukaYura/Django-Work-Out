@@ -82,7 +82,7 @@ class TrainingView(LoginRequiredMixin, TemplateView):
     # クエリパラメータを代入
     def get(self, request, bodyparts):
         training = BodyPart.objects.get(part_num=bodyparts)
-        test = training.training.filter(part_num=bodyparts)
+        test = training.training.filter(part_num=bodyparts).order_by("?")[:3]
         context = {
             "trainings": test
         }

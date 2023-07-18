@@ -5,12 +5,43 @@
 {% block title %}体重記録画面{% endblock %}
 
 {% block content %}
+<div class="back-btn"><a href="{% url 'workout:choicetraining' %}">&#8592;戻る</a></div>
   {% for training in trainings %}
-  <img src="{% static 'images/welcome.svg' %}"  alt="">
-  <div>
-    <p>こんにちは</p>
+  {% if forloop.counter == 1 %}
+  <div class="exercise">
+    <p>
+      <img class="training_img" src="{% static 'images/exercise1.png' %}"  alt="">
+    </p>
+    <div class="description">
+      <h1>{{ training.name }}</h1>
+      <p>{{ training.description  | linebreaksbr }}</p>
+    </div>
   </div>
-  <h1>{{ training.name }}</h1>
-  <p>{{ training.description }}</p>
+  {% endif %}
+  {% if forloop.counter == 2 %}
+  <div class="exercise">
+    <p>
+      <img class="training_img" src="{% static 'images/exercise2.png' %}"  alt="">
+    </p>
+    <div class="description">
+      <h1>{{ training.name }}</h1>
+      <p>{{ training.description  | linebreaksbr }}</p>
+    </div>
+  </div>
+  {% endif %}
+  {% if forloop.counter == 3 %}
+  <div class="exercise">
+    <p>
+      <img class="training_img" src="{% static 'images/exercise3.png' %}"  alt="">
+    </p>
+    <div class="description">
+      <h1>{{ training.name }}</h1>
+      <p>{{ training.description  | linebreaksbr }}</p>
+    </div>
+  </div>
+  {% endif %}
   {% endfor %}
+  <div class="record">
+    <button type="submit" class="exercise-record">記録</button>
+  </div>
 {% endblock content %}
