@@ -88,3 +88,8 @@ class TrainingView(LoginRequiredMixin, TemplateView):
         }
         
         return render(request, self.template_name, context)
+    
+    
+class QuestionView(LoginRequiredMixin, TemplateView):
+    template_name = 'workout/question.html'
+    pass

@@ -42,6 +42,6 @@
   {% endif %}
   {% endfor %}
   <div class="record">
-    <button type="submit" class="exercise-record">記録</button>
+    <a href="{% url 'workout:question' %}"><button type="submit" class="exercise-record">記録</button></a>
   </div>
 {% endblock content %}

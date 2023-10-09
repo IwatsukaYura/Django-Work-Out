@@ -1,6 +1,6 @@
 /* 全画面共通のスタイル指定 */
 body{
-  background-color: #E84545;
+  background-color: #F4F5F7;
 }
 
 /* ログイン・サインイン画面のスタイル指定 */
@@ -84,19 +84,26 @@ body{
   text-align: left;
 }
 
+/* ホーム画面のスタイル指定 */
+
 
 .home-container{
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
   margin-top: 50px;
+  max-width: 1000px;
 }
 
 .function{
-  background-color: #EEE2DE;
+  background-color: #A2D9CE;
   border-radius: 10px;
   margin: 0 auto;
   margin-bottom: 30px;
   cursor: pointer;
+  max-width: 350px;
+  max-height: 350px;
+  text-align: center;
 }
 
 .home-container p{
@@ -106,9 +113,10 @@ body{
 }
 
 .home-container img{
-  height: 90%;
-  margin: auto;
+  height: 60%;
+  margin: 0 auto;
   display: block;
+  margin-top: 40px;
 }
 
 /* 体重変更画面のスタイル指定 */
@@ -281,4 +289,80 @@ body{
   text-align: center;
   margin-top: 50px;
   margin-bottom: 70px;
+}
+
+/* Q&A画面のスタイル指定 */
+
+.question{
+  margin-top: 70px;
+}
+
+.qa-007 {
+  margin: 0 auto;
+  max-width: 500px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 4px rgb(0 0 0 / 2%), 0 2px 3px -2px rgba(0 0 0 / 5%);
+  background-color: #fff;
+}
+
+.qa-007 summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1em 2em 1em 3em;
+  color: #333333;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.qa-007 summary::before,
+.qa-007 p::before {
+  position: absolute;
+  left: 1em;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.qa-007 summary::before {
+  color: #75bbff;
+  content: "Q";
+}
+
+.qa-007 summary::after {
+  transform: translateY(-25%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-bottom: 3px solid #333333b3;
+  border-right: 3px solid #333333b3;
+  content: '';
+  transition: transform .5s;
+}
+
+.qa-007[open] summary::after {
+  transform: rotate(225deg);
+}
+
+.qa-007 p {
+  position: relative;
+  transform: translateY(-10px);
+  opacity: 0;
+  margin: 0;
+  padding: .3em 3em 1.5em;
+  color: #333;
+  transition: transform .5s, opacity .5s;
+}
+
+.qa-007[open] p {
+  transform: none;
+  opacity: 1;
+}
+
+.qa-007 p::before {
+  color: #ff8d8d;
+  line-height: 1.2;
+  content: "A";
 }

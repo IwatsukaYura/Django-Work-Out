@@ -12,4 +12,5 @@ urlpatterns = [
     path('choicetraining/', views.ChoiceTrainingView.as_view(), name='choicetraining'),
     path('choicerecord/', views.ChoiceRecordView.as_view(), name='choicerecord'),
     path('training/<int:bodyparts>', views.TrainingView.as_view(), name='training'),
+    path('question/', views.QuestionView.as_view(), name='question'),
 ]
