@@ -20,7 +20,7 @@ body{
   align-items: center;
 }
 .login-form p{
-  color: white;
+  color: black;
   font-size: 20px;
 }
 
@@ -41,15 +41,18 @@ body{
 }
 
 .login-btn{
-  background-color: #53354A;
+  background-color: #0C6FFD;
   width: 45%;
+  height: 50px;
   border-radius: 10px;
   cursor: pointer;
   margin: 0 auto;
 }
 .login-btn p{
-  font-size: 28px;
+  color : white;
+  font-size: 24px;
   text-align: center;
+  padding-top: 12px;
 }
 
 .login-err{
@@ -96,8 +99,10 @@ body{
 }
 
 .function{
-  background-color: #A2D9CE;
+  background-color: white;
   border-radius: 10px;
+  border: black 1px solid;
+  box-shadow: black 5px 5px 15px;
   margin: 0 auto;
   margin-bottom: 30px;
   cursor: pointer;
@@ -128,7 +133,7 @@ body{
 
 .back-btn{
   text-align: left;
-  color: white;
+  color: black;
   cursor: pointer;
   font-size: 20px;
 }
@@ -190,8 +195,10 @@ body{
 
 /* トレーニング選択画面のスタイル指定 */
 .training-parts{
-  background-color: #EEE2DE;
+  background-color: white;
   border-radius: 10px;
+  border: black 1px solid;
+  box-shadow: black 5px 5px 15px;
   margin: 0 auto;
   margin-bottom: 30px;
   cursor: pointer;
@@ -199,7 +206,7 @@ body{
 }
 
 .training-parts img{
-  height: 400px;
+  height: 280px;
   margin: auto;
   display: block;
 }
@@ -208,6 +215,8 @@ body{
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -218,7 +227,7 @@ body{
 }
 
 .choice-part{
-  color: white;
+  color: black;
   font-size: 35px;
   margin: 30px 0;
   text-align: center;
